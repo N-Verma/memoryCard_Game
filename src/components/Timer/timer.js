@@ -8,7 +8,6 @@ export const Timer=({sc,tsc,id})=>{
   var timer;
   var res=0;
   React.useEffect(() => {
-    //const timer = counter > 0 && setInterval(() => setCounter(counter - 1), 1000);
     if(counter>=0){
       timer = setInterval(() => setCounter(counter - 1), 1000);
       if(sc===tsc){

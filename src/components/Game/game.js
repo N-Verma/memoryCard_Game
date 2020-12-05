@@ -3,7 +3,6 @@ import './game.css'
 import {useHistory} from 'react-router-dom'
 import {Timer} from '../Timer/timer'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-//import {faShip,faAddressBook,faCalculator,faCoffee,faBomb,faSkull,faTrain,faDrum,faBriefcase,faTree} from '@fortawesome/free-solid-svg-icons'
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
 import { eiconarr, escore, ewidth, hiconarr, hscore, hwidth, miconarr, mscore, mwidth } from '../constants/data'
@@ -85,15 +84,6 @@ export const Game=(props)=>{
             ]
           });
     }
-    //console.log("here")
-    //
-    // var bool = true;
-    // console.log(bool)
-    // if(bool){
-    //     shuffle(iconarr);
-    //     bool=false
-    //     console.log(bool)
-    // }
     return(
         <div>
             <Timer sc={score} tsc={tscore} id={props.match.params.id}/>
