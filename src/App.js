@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router,Route } from 'react-router-dom';
 import {Game} from './components/Game/game'
 import {Landing} from './components/Landing/landing'
+import ParticlesBg from 'particles-bg'
 export const App = () =>{
   if(localStorage.getItem('loss')===null){
     localStorage.setItem('loss',0);
@@ -20,9 +21,12 @@ export const App = () =>{
     localStorage.setItem('hdt',0);
   }
   return(
+    <div>
+      <ParticlesBg num={40} type="lines" bg={true} />
     <Router>
       <Route exact path="/" component={Landing} />
       <Route path='/game/:id' component={Game} />
     </Router>
+    </div>
   )
 }
