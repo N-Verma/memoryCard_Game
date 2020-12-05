@@ -1,0 +1,141 @@
+.container {
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(119, 214, 218, 0.897),
+    rgb(25, 48, 97)
+  );
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.row1 {
+  height: 150px;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+}
+.title {
+  /* border: 0.5px solid black; */
+  font-size: 30px;
+  font-weight: bold;
+  background-color: transparent;
+  perspective: 1000px;
+}
+.choose {
+  background-color: darkorange;
+}
+.choose p {
+  padding-left: 3px;
+  margin-top: 40%;
+}
+.flip2-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  /* transform-origin: left; */
+}
+.title:hover .flip2-inner {
+  transform: rotateY(180deg);
+}
+.fr,
+.ba {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.fr {
+  background-color: rgb(187, 44, 25);
+  color: white;
+}
+.ba {
+  background-color: rgb(34, 98, 236);
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+.btime {
+  width: 50%;
+  border-right: 2px solid black;
+}
+.bscore {
+  width: 50%;
+}
+.btime ul {
+  list-style-type: none;
+  text-align: left;
+}
+.bscore ul {
+  list-style-type: none;
+  text-align: left;
+}
+.card1 {
+  height: 150px;
+  width: 150px;
+  margin: 5px;
+}
+.link {
+  text-decoration: none;
+  color: white;
+}
+.diff {
+  list-style-type: none;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.diff li {
+  margin-top: 7px;
+  margin-left: -23px;
+  width: 100%;
+  padding: 5px;
+}
+.diff li:hover {
+  background-color: rgb(34, 120, 206);
+}
+.flipl {
+  background-color: transparent;
+  perspective: 1000px;
+}
+.flipl-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flipl:hover .flipl-inner {
+  transform: rotateY(180deg);
+}
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.front {
+  background-color: rgb(71, 216, 90);
+  color: black;
+}
+
+.back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}

@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React from 'react';
+import { BrowserRouter as Router,Route } from 'react-router-dom';
+import {Game} from './components/Game/game'
+import {Landing} from './components/Landing/landing'
+export const App = () =>{
+  if(localStorage.getItem('loss')===null){
+    localStorage.setItem('loss',0);
+  }
+  //localStorage.setItem('win',0);
+  if(localStorage.getItem('win')===null){
+    localStorage.setItem('win',0);
+  }
+  if(localStorage.getItem('ezt')===null){
+    localStorage.setItem('ezt',0);
+  }
+  if(localStorage.getItem('mdt')===null){
+    localStorage.setItem('mdt',0);
+  }
+  if(localStorage.getItem('hdt')===null){
+    localStorage.setItem('hdt',0);
+  }
+  return(
+    <Router>
+      <Route exact path="/" component={Landing} />
+      <Route path='/game/:id' component={Game} />
+    </Router>
+  )
 }
-
-export default App;

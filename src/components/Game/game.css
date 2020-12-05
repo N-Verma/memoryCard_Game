@@ -1,0 +1,70 @@
+.board {
+  /* ez->520 med->620 hard->820 */
+  width: 620px;
+  height: 500px;
+  margin-top: 30px;
+  background-color: transparent;
+
+  /* border-image: url(http://blogrope.com/wp-content/uploads/2013/06/003-wood-melamine-subttle-pattern-background-pat.jpg)
+    30 30 stretch;
+  border-width: 15px;
+  border-style: solid; */
+  /* background-color: lightgray; */
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.card {
+  width: 150px;
+  height: 115px;
+  margin: 1px;
+  background-color: transparent;
+  perspective: 1000px;
+}
+@media screen and (max-width: 640px) {
+  .board {
+    height: 100vh;
+    margin-top: 15px;
+  }
+  .card {
+    width: 100px;
+    height: 85px;
+  }
+}
+.inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.gfront,
+.gback {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.gfront {
+  background-color: blueviolet;
+}
+.gfront:hover {
+  background-color: rgb(98, 33, 160);
+}
+.gback {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+.icon {
+  margin-top: 20px;
+  width: 55px;
+  height: 55px;
+}
